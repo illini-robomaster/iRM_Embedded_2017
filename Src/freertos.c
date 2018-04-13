@@ -119,7 +119,7 @@ void StartDefaultTask(void const * argument)
   MX_FATFS_Init();
 
   /* USER CODE BEGIN StartDefaultTask */
-  RM_RTOS_Default_Task();
+  RM_RTOS_Default_Task(argument);
   /* USER CODE END StartDefaultTask */
 }
 

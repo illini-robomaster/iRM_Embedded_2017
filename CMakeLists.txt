@@ -2,7 +2,7 @@ set(PRJ_NAME iRM2018)
 set(MCU_FAMILY STM32F4xx)
 set(MCU_LINE STM32F427xx)
 set(MCU_LINKER_SCRIPT STM32F427IIHx_FLASH.ld)
-SET(CMAKE_CXX_FLAGS -lm)
+set(CMAKE_CXX_FLAGS -lm)
 
 cmake_minimum_required(VERSION 3.6)
 
@@ -10,6 +10,12 @@ project(${PRJ_NAME} C ASM)
 
 add_definitions(-D${MCU_LINE})
 add_definitions(-DUSE_HAL_LIBRARY)
+
+option(INFANTRY1 "Set to generate infantry1 image" OFF)
+option(INFANTRY2 "Set to generate infantry2 image" OFF)
+option(INFANTRY3 "Set to generate infantry3 image" OFF)
+option(ENGINEERING "Set to generate engineering image" OFF)
+option(DEBUG "Set to ON to show debug information" OFF)
 
 file(GLOB_RECURSE LIB_SOURCES
         Src/*.c
@@ -38,7 +44,7 @@ include_directories(Middlewares/Third_Party/FreeRTOS/Source/include)
 include_directories(Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS)
 include_directories(Middlewares/Third_Party/FatFs/src/drivers)
 include_directories(Middlewares/Third_Party/FatFs/src)
-#include_directories(./Application/Inc)
+include_directories(Applications)
 
 add_executable(${PROJECT_NAME}.elf ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME}.elf m)
@@ -50,3 +56,23 @@ add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
         COMMAND ${CMAKE_OBJCOPY} -Oihex $<TARGET_FILE:${PROJECT_NAME}.elf> ${HEX_FILE}
         COMMAND ${CMAKE_OBJCOPY} -Obinary $<TARGET_FILE:${PROJECT_NAME}.elf> ${BIN_FILE}
         COMMENT "Building ${HEX_FILE} \nBuilding ${BIN_FILE}")
+
+if (INFANTRY1)
+    add_definitions(-DINFANTRY1)
+endif()
+
+if (INFANTRY2)
+    add_definitions(-DINFANTRY2)
+endif()
+
+if (INFANTRY3)
+    add_definitions(-DINFANTRY3)
+endif()
+
+if (ENGINEERING)
+    add_definitions(-DENGINEERING)
+endif()
+
+if (DEBUG)
+    add_definitions(-DDEBUG)
+endif()
