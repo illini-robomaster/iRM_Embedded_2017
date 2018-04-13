@@ -130,3 +130,6 @@ JLinkLog.txt
 *.mp4
 *.avi
 *.mov
+
+# build directory
+build/
