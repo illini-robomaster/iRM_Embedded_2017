@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
-  * @file   fatfs.c
-  * @brief  Code for fatfs applications
+  * @file    sd_diskio.h (based on sd_diskio_dma_rtos_template.h v2.0.1)
+  * @brief   Header for sd_diskio.c module
   ******************************************************************************
   * This notice applies to any and all portions of this file
   * that are not between comment pairs USER CODE BEGIN and
@@ -46,41 +46,26 @@
   ******************************************************************************
   */
 
-#include "fatfs.h"
+/* Define to prevent recursive inclusion -------------------------------------*/
+#ifndef __SD_DISKIO_H
+#define __SD_DISKIO_H
 
-uint8_t retSD;    /* Return value for SD */
-char SDPath[4];   /* SD logical drive path */
-FATFS SDFatFS;    /* File system object for SD logical drive */
-FIL SDFile;       /* File object for SD */
+/* USER CODE BEGIN firstSection */ 
+/* can be used to modify / undefine following code or add new definitions */
+/* USER CODE END firstSection */
 
-/* USER CODE BEGIN Variables */
+/* Includes ------------------------------------------------------------------*/
+#include "bsp_driver_sd.h"
+/* Exported types ------------------------------------------------------------*/
+/* Exported constants --------------------------------------------------------*/
+/* Exported functions ------------------------------------------------------- */
+extern const Diskio_drvTypeDef  SD_Driver;
 
-/* USER CODE END Variables */    
+/* USER CODE BEGIN lastSection */ 
+/* can be used to modify / undefine previous code or add new definitions */
+/* USER CODE END lastSection */
 
-void MX_FATFS_Init(void) 
-{
-  /*## FatFS: Link the SD driver ###########################*/
-  retSD = FATFS_LinkDriver(&SD_Driver, SDPath);
-
-  /* USER CODE BEGIN Init */
-  /* additional user code for init */     
-  /* USER CODE END Init */
-}
-
-/**
-  * @brief  Gets Time from RTC 
-  * @param  None
-  * @retval Time in DWORD
-  */
-DWORD get_fattime(void)
-{
-  /* USER CODE BEGIN get_fattime */
-  return 0;
-  /* USER CODE END get_fattime */  
-}
-
-/* USER CODE BEGIN Application */
-     
-/* USER CODE END Application */
+#endif /* __SD_DISKIO_H */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+

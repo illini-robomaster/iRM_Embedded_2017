@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
-  * @file   fatfs.c
-  * @brief  Code for fatfs applications
+  * File Name          : main.hpp
+  * Description        : This file contains the common defines of the application
   ******************************************************************************
   * This notice applies to any and all portions of this file
   * that are not between comment pairs USER CODE BEGIN and
@@ -45,42 +45,70 @@
   *
   ******************************************************************************
   */
+/* Define to prevent recursive inclusion -------------------------------------*/
+#ifndef __MAIN_H
+#define __MAIN_H
+  /* Includes ------------------------------------------------------------------*/
+#include "stm32f4xx_hal.h"
 
-#include "fatfs.h"
+/* Includes ------------------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
 
-uint8_t retSD;    /* Return value for SD */
-char SDPath[4];   /* SD logical drive path */
-FATFS SDFatFS;    /* File system object for SD logical drive */
-FIL SDFile;       /* File object for SD */
+/* USER CODE END Includes */
 
-/* USER CODE BEGIN Variables */
+/* Private define ------------------------------------------------------------*/
 
-/* USER CODE END Variables */    
+#define IST_INT_Pin GPIO_PIN_3
+#define IST_INT_GPIO_Port GPIOE
+#define IST_RST_Pin GPIO_PIN_2
+#define IST_RST_GPIO_Port GPIOE
+#define IMU_HEAT_PWM_Pin GPIO_PIN_5
+#define IMU_HEAT_PWM_GPIO_Port GPIOB
+#define LASER_Pin GPIO_PIN_13
+#define LASER_GPIO_Port GPIOG
+#define BEEP_Pin GPIO_PIN_4
+#define BEEP_GPIO_Port GPIOB
+#define SWITCH_1_Pin GPIO_PIN_4
+#define SWITCH_1_GPIO_Port GPIOA
+#define KEY_Pin GPIO_PIN_10
+#define KEY_GPIO_Port GPIOD
+#define SWITCH_2_Pin GPIO_PIN_5
+#define SWITCH_2_GPIO_Port GPIOA
+#define LED_GREEN_Pin GPIO_PIN_14
+#define LED_GREEN_GPIO_Port GPIOF
+#define LED_RED_Pin GPIO_PIN_7
+#define LED_RED_GPIO_Port GPIOE
+#define SD_EXTI_Pin GPIO_PIN_15
+#define SD_EXTI_GPIO_Port GPIOE
 
-void MX_FATFS_Init(void) 
-{
-  /*## FatFS: Link the SD driver ###########################*/
-  retSD = FATFS_LinkDriver(&SD_Driver, SDPath);
+/* ########################## Assert Selection ############################## */
+/**
+  * @brief Uncomment the line below to expanse the "assert_param" macro in the 
+  *        HAL drivers code
+  */
+/* #define USE_FULL_ASSERT    1U */
 
-  /* USER CODE BEGIN Init */
-  /* additional user code for init */     
-  /* USER CODE END Init */
+/* USER CODE BEGIN Private defines */
+
+/* USER CODE END Private defines */
+
+#ifdef __cplusplus
+ extern "C" {
+#endif
+void _Error_Handler(char *, int);
+
+#define Error_Handler() _Error_Handler(__FILE__, __LINE__)
+#ifdef __cplusplus
 }
+#endif
 
 /**
-  * @brief  Gets Time from RTC 
-  * @param  None
-  * @retval Time in DWORD
-  */
-DWORD get_fattime(void)
-{
-  /* USER CODE BEGIN get_fattime */
-  return 0;
-  /* USER CODE END get_fattime */  
-}
+  * @}
+  */ 
 
-/* USER CODE BEGIN Application */
-     
-/* USER CODE END Application */
+/**
+  * @}
+*/ 
 
+#endif /* __MAIN_H */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

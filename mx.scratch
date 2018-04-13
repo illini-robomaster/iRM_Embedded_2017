@@ -2,7 +2,7 @@
 <Project>
 <ProjectName>\\Mac\Home\Documents\GitHub\iRM_Embedded\\iRM_Embedded</ProjectName>
 <CMSIS>..\Drivers\CMSIS</CMSIS>
-<HAL_Driver>C:\Users\nickelliang\STM32Cube\Repository\STM32Cube_FW_F4_V1.13.0\Drivers\CMSIS</HAL_Driver>
+<HAL_Driver>C:\Users\nickelliang\STM32Cube\Repository\STM32Cube_FW_F4_V1.18.0\Drivers\CMSIS</HAL_Driver>
 
 <Toolchain>SW4STM32</Toolchain>
 <Version>0</Version>
@@ -32,7 +32,7 @@
     <usedDebug>true</usedDebug>
     	<debugprobe>swd</debugprobe>
     <optimization>6</optimization>
-    <icfloc>1</icfloc>
+    <icfloc>0</icfloc>
     <Adefines>
         <define></define>
     </Adefines>   
@@ -61,7 +61,6 @@
 	   <include>..\Inc</include>
 	   <include>..\Drivers\STM32F4xx_HAL_Driver\Inc</include>
 	   <include>..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy</include>
-	   <include>..\Middlewares\Third_Party\FatFs\src\drivers</include>
 	   <include>..\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F</include>
 	   <include>..\Drivers\CMSIS\Device\ST\STM32F4xx\Include</include>
 	   <include>..\Middlewares\Third_Party\FatFs\src</include>
