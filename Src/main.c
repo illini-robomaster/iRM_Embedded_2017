@@ -61,7 +61,7 @@
 #include "gpio.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "rm_main.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -128,7 +128,7 @@ int main(void)
   MX_SDIO_SD_Init();
 
   /* USER CODE BEGIN 2 */
-
+  RM_Main_Init();
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
