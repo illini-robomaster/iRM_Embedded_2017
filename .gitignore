@@ -134,3 +134,6 @@ JLinkLog.txt
 # build directory
 build/
 html/
+
+# CMake Compile Commands
+compile_commands.json

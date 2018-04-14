@@ -2,6 +2,7 @@ set(PRJ_NAME iRM2018)
 set(MCU_FAMILY STM32F4xx)
 set(MCU_LINE STM32F427xx)
 set(MCU_LINKER_SCRIPT STM32F427IIHx_FLASH.ld)
+set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 set(CMAKE_CXX_FLAGS -lm)
 
 cmake_minimum_required(VERSION 3.6)
@@ -27,7 +28,9 @@ file(GLOB_RECURSE LIB_SOURCES
         Drivers/STM32F4xx_HAL_Driver/Src/*.c
         )
 
-#file(GLOB_RECURSE USER_SOURCES ./Application/Src/*.c)
+file(GLOB_RECURSE USER_SOURCES ./Application/BSP/*.c
+                               ./Applications/Libraries/*.c
+                               ./Applications/Tasks/*.c)
 file(GLOB_RECURSE CMSIS_STARTUP startup/startup_stm32f427xx.s)
 
 #set(SOURCE_FILES ${LIB_SOURCES} ${USER_SOURCES} ${CMSIS_STARTUP})
@@ -45,6 +48,9 @@ include_directories(Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS)
 include_directories(Middlewares/Third_Party/FatFs/src/drivers)
 include_directories(Middlewares/Third_Party/FatFs/src)
 include_directories(Applications)
+include_directories(Applications/BSP)
+include_directories(Applications/Libraries)
+include_directories(Applications/Tasks)
 
 add_executable(${PROJECT_NAME}.elf ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME}.elf m)
