@@ -28,9 +28,9 @@ file(GLOB_RECURSE LIB_SOURCES
         Drivers/STM32F4xx_HAL_Driver/Src/*.c
         )
 
-file(GLOB_RECURSE USER_SOURCES ./Application/BSP/*.c
-                               ./Applications/Libraries/*.c
-                               ./Applications/Tasks/*.c)
+file(GLOB_RECURSE USER_SOURCES Applications/BSP/*.c
+                               Applications/Libraries/*.c
+                               Applications/Tasks/*.c)
 file(GLOB_RECURSE CMSIS_STARTUP startup/startup_stm32f427xx.s)
 
 #set(SOURCE_FILES ${LIB_SOURCES} ${USER_SOURCES} ${CMSIS_STARTUP})
