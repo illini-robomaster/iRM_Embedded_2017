@@ -15,7 +15,7 @@ SET(CMAKE_CXX_COMPILER arm-none-eabi-g++)
 set(COMMON_FLAGS "-mcpu=${MCU_ARCH} -mthumb -mthumb-interwork -mfloat-abi=${MCU_FLOAT_ABI} -ffunction-sections -fdata-sections -g -fno-common -fmessage-length=0 -specs=nano.specs -specs=nosys.specs")
 
 if (MCU_FLOAT_ABI STREQUAL hard)
-    set(COMMON_FLAGS "${COMMON_FLAGS} -mfpu=${MCU_FPU}")
+    set(COMMON_FLAGS "${COMMON_FLAGS} -mfpu=${MCU_FPU} -u _printf_float")
 endif ()
 
 set(CMAKE_CXX_FLAGS "${COMMON_FLAGS} -std=c++11")
