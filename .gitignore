@@ -134,6 +134,10 @@ JLinkLog.txt
 # build directory
 build/
 html/
+data_history/
 
 # CMake Compile Commands
 compile_commands.json
+
+# Build result
+*.bin
