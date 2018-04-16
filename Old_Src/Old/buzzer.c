@@ -82,8 +82,6 @@ RM_BUZZER_Freq Startup[] = {
 RM_BUZZER_Freq LittleStar[] = {
     Do1M, Do1M, So5M, So5M, La6M, La6M, So5M, Silent,
     Fa4M, Fa4M, Mi3M, Mi3M, Re2M, Re2M, Do1M, Silent,
-    So5M, So5M, Fa4M, Fa4M, Mi3M, Mi3M, Re2M, Silent,
-    So5M, So5M, Fa4M, Fa4M, Mi3M, Mi3M, Re2M, Silent,
-    Do1M, Do1M, So5M, So5M, La6M, La6M, So5M, Silent,
+    So5M, So5M, Fa4M, Fa4M, Mi3M, Mi3M, Re2M, Silent,   M, Do1M, So5M, So5M, La6M, La6M, So5M, Silent,
     Fa4M, Fa4M, Mi3M, Mi3M, Re2M, Re2M, Do1M, Silent, Finish
 };
