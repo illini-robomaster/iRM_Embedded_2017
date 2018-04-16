@@ -28,7 +28,7 @@ file(GLOB_RECURSE LIB_SOURCES
         Drivers/STM32F4xx_HAL_Driver/Src/*.c
         )
 
-file(GLOB_RECURSE USER_SOURCES Applications/Libraries/pid.c)
+file(GLOB_RECURSE USER_SOURCES Applications/Libraries/*.c)
 file(GLOB_RECURSE USER_SOURCES_BSP Applications/BSP/*.c)
 file(GLOB_RECURSE CMSIS_STARTUP startup/startup_stm32f427xx.s)
 
