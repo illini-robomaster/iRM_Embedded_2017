@@ -52,6 +52,6 @@ remake: clean all
 
 # Actual rule to make the targets
 cmake:
-	mkdir -p ${BUILD_DIR} && cd ${BUILD_DIR} && cmake -DCMAKE_TOOLCHAIN_FILE=${TOOLCHAIN_FILE} ${ROBOT} ${DEBUG_FLAG} .. && make -j && mv iRM2018.bin ../${FILE_NAME}${FILE_NAME_DEBUG}.bin && cd ..
+	mkdir -p ${BUILD_DIR} && cd ${BUILD_DIR} && cmake -DCMAKE_TOOLCHAIN_FILE=${TOOLCHAIN_FILE} ${ROBOT} ${DEBUG_FLAG} .. && make -j && mv iRM2018.elf ../${FILE_NAME}${FILE_NAME_DEBUG}.elf && mv iRM2018.bin ../${FILE_NAME}${FILE_NAME_DEBUG}.bin && cd ..
 	@echo ""
-	@echo "${FILE_NAME}${FILE_NAME_DEBUG}.bin created."
+	@echo "${FILE_NAME}${FILE_NAME_DEBUG}.elf created."
