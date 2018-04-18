@@ -50,6 +50,7 @@ how:
 	@echo "engineering: 	Build Engineering.elf"
 	@echo ""
 	@echo "Add \"DEBUG=1\" to inject DEBUG macro"
+	@echo "ADD \"RUNTEST=1\" to inject TEST macro"
 
 # Rules to remake
 remake: clean all
