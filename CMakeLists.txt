@@ -17,6 +17,7 @@ option(INFANTRY2 "Set to generate infantry2 image" OFF)
 option(INFANTRY3 "Set to generate infantry3 image" OFF)
 option(ENGINEERING "Set to generate engineering image" OFF)
 option(DEBUG "Set to ON to show debug information" OFF)
+option(RUNTEST "Set to ON to run all tests" OFF)
 
 file(GLOB_RECURSE LIB_SOURCES
         Src/*.c
@@ -29,10 +30,11 @@ file(GLOB_RECURSE LIB_SOURCES
         )
 
 file(GLOB_RECURSE USER_SOURCES Applications/Libraries/*.c)
+file(GLOB_RECURSE TEST_SOURCES Applications/Tests/*.c)
 file(GLOB_RECURSE USER_SOURCES_BSP Applications/BSP/*.c)
 file(GLOB_RECURSE CMSIS_STARTUP startup/startup_stm32f427xx.s)
 
-set(SOURCE_FILES ${LIB_SOURCES} ${USER_SOURCES} ${USER_SOURCES_BSP} ${CMSIS_STARTUP})
+set(SOURCE_FILES ${LIB_SOURCES} ${USER_SOURCES} ${TEST_SOURCES} ${USER_SOURCES_BSP} ${CMSIS_STARTUP})
 #set(SOURCE_FILES ${LIB_SOURCES} ${CMSIS_STARTUP})
 
 include_directories(Inc)
@@ -50,6 +52,7 @@ include_directories(Applications)
 include_directories(Applications/BSP)
 include_directories(Applications/Libraries)
 include_directories(Applications/Tasks)
+include_directories(Applications/Tests)
 
 add_executable(${PROJECT_NAME}.elf ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME}.elf m)
@@ -80,4 +83,8 @@ endif()
 
 if (DEBUG)
     add_definitions(-DDEBUG)
+endif()
+
+if (RUNTEST)
+    add_definitions(-DTEST)
 endif()
