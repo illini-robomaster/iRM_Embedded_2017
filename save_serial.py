@@ -3,6 +3,7 @@ import serial
 import sys
 import os
 import time
+import sys
 
 data_dir = "data_history/"
 if not os.path.exists(data_dir):
@@ -26,14 +27,11 @@ while not connected:
     connected = True
 
 try:
-    cache_str = ""
     while True:
         if ser.inWaiting():
             data = ser.read()
-            cache_str += data
-            if "\n" in cache_str:
-                print cache_str
-                cache_str = ""
+            sys.stdout.write(data)
+            sys.stdout.flush()
             save_stream.write(data)
 except KeyboardInterrupt:
     print "Cleaning up..."
