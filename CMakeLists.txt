@@ -32,9 +32,10 @@ file(GLOB_RECURSE LIB_SOURCES
 file(GLOB_RECURSE USER_SOURCES Applications/Libraries/*.c)
 file(GLOB_RECURSE TEST_SOURCES Applications/Tests/*.c)
 file(GLOB_RECURSE USER_SOURCES_BSP Applications/BSP/*.c)
+file(GLOB_RECURSE USER_SOURCES_TPLIB Applications/Third_Party_Libraries/*.c)
 file(GLOB_RECURSE CMSIS_STARTUP startup/startup_stm32f427xx.s)
 
-set(SOURCE_FILES ${LIB_SOURCES} ${USER_SOURCES} ${TEST_SOURCES} ${USER_SOURCES_BSP} ${CMSIS_STARTUP})
+set(SOURCE_FILES ${LIB_SOURCES} ${USER_SOURCES} ${TEST_SOURCES} ${USER_SOURCES_BSP} ${USER_SOURCES_TPLIB} ${CMSIS_STARTUP})
 #set(SOURCE_FILES ${LIB_SOURCES} ${CMSIS_STARTUP})
 
 include_directories(Inc)
@@ -53,6 +54,7 @@ include_directories(Applications/BSP)
 include_directories(Applications/Libraries)
 include_directories(Applications/Tasks)
 include_directories(Applications/Tests)
+include_directories(Applications/Third_Party_Libraries)
 
 add_executable(${PROJECT_NAME}.elf ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME}.elf m)
