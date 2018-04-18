@@ -5,6 +5,10 @@ ifneq ($(DEBUG), 0)
     DEBUG_FLAG = -DDEBUG=ON
     FILE_NAME_DEBUG = _debug
 endif
+RUNTEST ?= 0
+ifneq ($(RUNTEST), 0)
+    RUNTEST_FLAG = -DRUNTEST=ON
+endif
 
 .PHONY: clean how remake cmake infantry1 infantry2 infantry3
 
@@ -52,6 +56,6 @@ remake: clean all
 
 # Actual rule to make the targets
 cmake:
-	mkdir -p ${BUILD_DIR} && cd ${BUILD_DIR} && cmake -DCMAKE_TOOLCHAIN_FILE=${TOOLCHAIN_FILE} ${ROBOT} ${DEBUG_FLAG} .. && make -j && mv iRM2018.elf ../${FILE_NAME}${FILE_NAME_DEBUG}.elf && mv iRM2018.bin ../${FILE_NAME}${FILE_NAME_DEBUG}.bin && cd ..
+	mkdir -p ${BUILD_DIR} && cd ${BUILD_DIR} && cmake -DCMAKE_TOOLCHAIN_FILE=${TOOLCHAIN_FILE} ${ROBOT} ${DEBUG_FLAG} ${RUNTEST_FLAG} .. && make -j && mv iRM2018.elf ../${FILE_NAME}${FILE_NAME_DEBUG}.elf && mv iRM2018.bin ../${FILE_NAME}${FILE_NAME_DEBUG}.bin && cd ..
 	@echo ""
 	@echo "${FILE_NAME}${FILE_NAME_DEBUG}.elf created."
