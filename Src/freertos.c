@@ -59,7 +59,6 @@
 osThreadId defaultTaskHandle;
 
 /* USER CODE BEGIN Variables */
-
 /* USER CODE END Variables */
 
 /* Function prototypes -------------------------------------------------------*/

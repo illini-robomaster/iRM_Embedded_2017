@@ -43,6 +43,7 @@
 /* External variables --------------------------------------------------------*/
 extern CAN_HandleTypeDef hcan1;
 extern CAN_HandleTypeDef hcan2;
+extern SD_HandleTypeDef hsd;
 extern DMA_HandleTypeDef hdma_usart1_rx;
 extern DMA_HandleTypeDef hdma_usart2_rx;
 extern DMA_HandleTypeDef hdma_usart3_rx;
@@ -55,7 +56,7 @@ extern UART_HandleTypeDef huart6;
 extern TIM_HandleTypeDef htim6;
 
 /******************************************************************************/
-/*            Cortex-M4 Processor Interruption and Exception Handlers         */
+/*            Cortex-M4 Processor Interruption and Exception Handlers         */ 
 /******************************************************************************/
 
 /**
@@ -265,6 +266,20 @@ void USART3_IRQHandler(void)
   /* USER CODE BEGIN USART3_IRQn 1 */
 
   /* USER CODE END USART3_IRQn 1 */
+}
+
+/**
+* @brief This function handles SDIO global interrupt.
+*/
+void SDIO_IRQHandler(void)
+{
+  /* USER CODE BEGIN SDIO_IRQn 0 */
+
+  /* USER CODE END SDIO_IRQn 0 */
+  HAL_SD_IRQHandler(&hsd);
+  /* USER CODE BEGIN SDIO_IRQn 1 */
+
+  /* USER CODE END SDIO_IRQn 1 */
 }
 
 /**
