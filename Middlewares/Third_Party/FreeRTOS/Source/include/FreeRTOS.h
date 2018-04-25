@@ -167,7 +167,7 @@ extern "C" {
 #endif
 
 #ifndef INCLUDE_vTaskDelayUntil
-	#define INCLUDE_vTaskDelayUntil 0
+	#define INCLUDE_vTaskDelayUntil 1
 #endif
 
 #ifndef INCLUDE_vTaskDelay
@@ -1060,4 +1060,3 @@ typedef struct xSTATIC_TIMER
 #endif
 
 #endif /* INC_FREERTOS_H */
-
