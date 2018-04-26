@@ -108,7 +108,7 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
   RM_RTOS_QUEUES_Init();
- // RM_RTOS_Ready();
+  RM_RTOS_Ready();
   /* USER CODE END RTOS_QUEUES */
 }
 
