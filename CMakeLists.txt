@@ -16,6 +16,7 @@ option(INFANTRY1 "Set to generate infantry1 image" OFF)
 option(INFANTRY2 "Set to generate infantry2 image" OFF)
 option(INFANTRY3 "Set to generate infantry3 image" OFF)
 option(ENGINEERING "Set to generate engineering image" OFF)
+option(HERO "Set to generate hero image" OFF)
 option(DEBUG "Set to ON to show debug information" OFF)
 option(RUNTEST "Set to ON to run all tests" OFF)
 
@@ -82,6 +83,10 @@ endif()
 
 if (ENGINEERING)
     add_definitions(-DENGINEERING)
+endif()
+
+if (HERO)
+    add_definitions(-DHERO)
 endif()
 
 if (DEBUG)
