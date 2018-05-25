@@ -2,6 +2,7 @@
 # Prerequisites
 *.d
 *.DS_Store
+*.osx.project
 
 # Object files
 *.o
