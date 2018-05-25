@@ -63,6 +63,8 @@ extern const Diskio_drvTypeDef  SD_Driver;
 
 /* USER CODE BEGIN lastSection */ 
 /* can be used to modify / undefine previous code or add new definitions */
+void BSP_SD_WriteCpltCallback();
+void BSP_SD_ReadCpltCallback();
 /* USER CODE END lastSection */
 
 #endif /* __SD_DISKIO_H */

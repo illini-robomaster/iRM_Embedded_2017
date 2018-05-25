@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
-<ProjectName>/Users/alvin/iRM_Embedded/\iRM_Embedded</ProjectName>
+<ProjectName>/Users/nickelliang/Documents/GitHub/iRM_Embedded/\iRM_Embedded</ProjectName>
 <ProjectNature>C</ProjectNature> 
 <CMSIS>../Drivers/CMSIS</CMSIS>
-<HAL_Driver>/Users/alvin/STM32Cube/Repository//STM32Cube_FW_F4_V1.18.0/Drivers/CMSIS</HAL_Driver>
+<HAL_Driver>/Users/nickelliang/STM32Cube/Repository//STM32Cube_FW_F4_V1.18.0/Drivers/CMSIS</HAL_Driver>
 <Toolchain>SW4STM32</Toolchain>
 <Version>0</Version>
 
@@ -24,14 +24,14 @@
   <config>
     <name>iRM_Embedded</name>				
     <device>STM32F427IIHx</device>		 
-    <heapSize>0x500</heapSize>
+    <heapSize>0x800</heapSize>
     <stackSize>0x1000</stackSize>
     
     	<board>custom</board>
 			
     <usedDebug>true</usedDebug>
     	<debugprobe>swd</debugprobe>
-    <optimization>6</optimization>
+    <optimization>2</optimization>
     <icfloc>0</icfloc>
     <Adefines>
         <define></define>
