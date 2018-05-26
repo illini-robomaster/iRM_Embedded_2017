@@ -19,6 +19,7 @@ option(ENGINEERING "Set to generate engineering image" OFF)
 option(HERO "Set to generate hero image" OFF)
 option(DEBUG "Set to ON to show debug information" OFF)
 option(RUNTEST "Set to ON to run all tests" OFF)
+option(USE_REMOTE "Set to ON to enble RC control" OFF)
 
 file(GLOB_RECURSE LIB_SOURCES
         Src/*.c
@@ -95,4 +96,8 @@ endif()
 
 if (RUNTEST)
     add_definitions(-DTEST)
+endif()
+
+if (USE_REMOTE)
+    add_definitions(-DUSE_REMOTE)
 endif()
