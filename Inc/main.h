@@ -70,16 +70,20 @@
 #define BEEP_GPIO_Port GPIOB
 #define SWITCH_1_Pin GPIO_PIN_4
 #define SWITCH_1_GPIO_Port GPIOA
+#define SWITCH_1_EXTI_IRQn EXTI4_IRQn
 #define KEY_Pin GPIO_PIN_10
 #define KEY_GPIO_Port GPIOD
+#define KEY_EXTI_IRQn EXTI15_10_IRQn
 #define SWITCH_2_Pin GPIO_PIN_5
 #define SWITCH_2_GPIO_Port GPIOA
+#define SWITCH_2_EXTI_IRQn EXTI9_5_IRQn
 #define LED_GREEN_Pin GPIO_PIN_14
 #define LED_GREEN_GPIO_Port GPIOF
 #define LED_RED_Pin GPIO_PIN_7
 #define LED_RED_GPIO_Port GPIOE
 #define SD_EXTI_Pin GPIO_PIN_15
 #define SD_EXTI_GPIO_Port GPIOE
+#define SD_EXTI_EXTI_IRQn EXTI15_10_IRQn
 
 /* ########################## Assert Selection ############################## */
 /**
