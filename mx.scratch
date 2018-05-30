@@ -24,8 +24,8 @@
   <config>
     <name>iRM_Embedded</name>				
     <device>STM32F427IIHx</device>		 
-    <heapSize>0x800</heapSize>
-    <stackSize>0x1000</stackSize>
+    <heapSize>0x10000</heapSize>
+    <stackSize>0x20000</stackSize>
     
     	<board>custom</board>
 			
