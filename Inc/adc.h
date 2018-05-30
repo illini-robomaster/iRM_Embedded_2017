@@ -1,7 +1,8 @@
 /**
   ******************************************************************************
-  * File Name          : main.hpp
-  * Description        : This file contains the common defines of the application
+  * File Name          : ADC.h
+  * Description        : This file provides code for the configuration
+  *                      of the ADC instances.
   ******************************************************************************
   * This notice applies to any and all portions of this file
   * that are not between comment pairs USER CODE BEGIN and
@@ -46,75 +47,45 @@
   ******************************************************************************
   */
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __MAIN_H
-#define __MAIN_H
-  /* Includes ------------------------------------------------------------------*/
-#include "stm32f4xx_hal.h"
+#ifndef __adc_H
+#define __adc_H
+#ifdef __cplusplus
+ extern "C" {
+#endif
 
 /* Includes ------------------------------------------------------------------*/
+#include "stm32f4xx_hal.h"
+#include "main.h"
+
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
 
-/* Private define ------------------------------------------------------------*/
-
-#define IST_INT_Pin GPIO_PIN_3
-#define IST_INT_GPIO_Port GPIOE
-#define IST_RST_Pin GPIO_PIN_2
-#define IST_RST_GPIO_Port GPIOE
-#define IMU_HEAT_PWM_Pin GPIO_PIN_5
-#define IMU_HEAT_PWM_GPIO_Port GPIOB
-#define LASER_Pin GPIO_PIN_13
-#define LASER_GPIO_Port GPIOG
-#define BEEP_Pin GPIO_PIN_4
-#define BEEP_GPIO_Port GPIOB
-#define SWITCH_1_Pin GPIO_PIN_4
-#define SWITCH_1_GPIO_Port GPIOA
-#define SWITCH_1_EXTI_IRQn EXTI4_IRQn
-#define KEY_Pin GPIO_PIN_10
-#define KEY_GPIO_Port GPIOD
-#define KEY_EXTI_IRQn EXTI15_10_IRQn
-#define SWITCH_2_Pin GPIO_PIN_5
-#define SWITCH_2_GPIO_Port GPIOA
-#define SWITCH_2_EXTI_IRQn EXTI9_5_IRQn
-#define OLED_BUTTON_Pin GPIO_PIN_5
-#define OLED_BUTTON_GPIO_Port GPIOC
-#define LED_GREEN_Pin GPIO_PIN_14
-#define LED_GREEN_GPIO_Port GPIOF
-#define LED_RED_Pin GPIO_PIN_7
-#define LED_RED_GPIO_Port GPIOE
-#define SD_EXTI_Pin GPIO_PIN_15
-#define SD_EXTI_GPIO_Port GPIOE
-#define SD_EXTI_EXTI_IRQn EXTI15_10_IRQn
-
-/* ########################## Assert Selection ############################## */
-/**
-  * @brief Uncomment the line below to expanse the "assert_param" macro in the 
-  *        HAL drivers code
-  */
-/* #define USE_FULL_ASSERT    1U */
+extern ADC_HandleTypeDef hadc1;
 
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
 
-#ifdef __cplusplus
- extern "C" {
-#endif
-void _Error_Handler(char *, int);
+extern void _Error_Handler(char *, int);
 
-#define Error_Handler() _Error_Handler(__FILE__, __LINE__)
+void MX_ADC1_Init(void);
+
+/* USER CODE BEGIN Prototypes */
+
+/* USER CODE END Prototypes */
+
 #ifdef __cplusplus
 }
 #endif
+#endif /*__ adc_H */
 
 /**
   * @}
-  */ 
+  */
 
 /**
   * @}
-*/ 
+  */
 
-#endif /* __MAIN_H */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

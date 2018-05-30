@@ -50,6 +50,7 @@
 #include "main.h"
 #include "stm32f4xx_hal.h"
 #include "cmsis_os.h"
+#include "adc.h"
 #include "can.h"
 #include "dma.h"
 #include "fatfs.h"
@@ -126,6 +127,7 @@ int main(void)
   MX_I2C2_Init();
   MX_SPI4_Init();
   MX_SDIO_SD_Init();
+  MX_ADC1_Init();
 
   /* USER CODE BEGIN 2 */
   RM_Main_Init();
