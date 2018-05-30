@@ -24,14 +24,14 @@
   <config>
     <name>iRM_Embedded</name>				
     <device>STM32F427IIHx</device>		 
-    <heapSize>0x10000</heapSize>
-    <stackSize>0x20000</stackSize>
+    <heapSize>0x5000</heapSize>
+    <stackSize>0x10000</stackSize>
     
     	<board>custom</board>
 			
     <usedDebug>true</usedDebug>
     	<debugprobe>swd</debugprobe>
-    <optimization>2</optimization>
+    <optimization>6</optimization>
     <icfloc>0</icfloc>
     <Adefines>
         <define></define>
