@@ -9,6 +9,10 @@ RUNTEST ?= 0
 ifneq ($(RUNTEST), 0)
     RUNTEST_FLAG = -DRUNTEST=ON
 endif
+USE_REMOTE ?= 0
+ifneq ($(USE_REMOTE), 0)
+    USEREMOTE_FLAG = -DUSE_REMOTE=ON
+endif
 
 .PHONY: clean how remake cmake infantry1 infantry2 infantry3
 
@@ -51,12 +55,13 @@ how:
 	@echo ""
 	@echo "Add \"DEBUG=1\" to inject DEBUG macro"
 	@echo "ADD \"RUNTEST=1\" to inject TEST macro"
+	@echo "ADD \"USE_REMOTE=1\" to inject USE_REMOTE marco"
 
 # Rules to remake
 remake: clean all
 
 # Actual rule to make the targets
 cmake:
-	mkdir -p ${BUILD_DIR} && cd ${BUILD_DIR} && cmake -DCMAKE_TOOLCHAIN_FILE=${TOOLCHAIN_FILE} ${ROBOT} ${DEBUG_FLAG} ${RUNTEST_FLAG} .. && make -j && mv iRM2018.elf ../${FILE_NAME}${FILE_NAME_DEBUG}.elf && mv iRM2018.bin ../${FILE_NAME}${FILE_NAME_DEBUG}.bin && cd ..
+	mkdir -p ${BUILD_DIR} && cd ${BUILD_DIR} && cmake -DCMAKE_TOOLCHAIN_FILE=${TOOLCHAIN_FILE} ${ROBOT} ${DEBUG_FLAG} ${RUNTEST_FLAG} ${USEREMOTE_FLAG} .. && make -j && mv iRM2018.elf ../${FILE_NAME}${FILE_NAME_DEBUG}.elf && mv iRM2018.bin ../${FILE_NAME}${FILE_NAME_DEBUG}.bin && cd ..
 	@echo ""
 	@echo "${FILE_NAME}${FILE_NAME_DEBUG}.elf created."
