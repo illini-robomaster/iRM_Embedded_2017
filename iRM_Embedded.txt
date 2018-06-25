@@ -1,6 +1,6 @@
 Configuration	iRM_Embedded
-STM32CubeMX 	4.25.1
-Date	06/14/2018
+STM32CubeMX 	4.26.0
+Date	06/25/2018
 MCU	STM32F427IIHx
 
 
@@ -148,7 +148,7 @@ Project Settings :
 Project Name : iRM_Embedded
 Project Folder : /Users/alvin/iRM_Embedded
 Toolchain / IDE : SW4STM32
-Firmware Package Name and Version : STM32Cube FW_F4 V1.18.0
+Firmware Package Name and Version : STM32Cube FW_F4 V1.21.0
 
 
 Code Generation Settings : 
