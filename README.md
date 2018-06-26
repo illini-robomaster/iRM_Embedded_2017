@@ -1,21 +1,16 @@
-# Illini RoboMaster Embedded Control
+# Illini RoboMaster Embedded Control 2017
 
-This repository hosted low level hardware protocol & control algrithms implemented with STM32F427 embedded platform.
-
-## Git Usage Rule
-* Always **`pull`** first!!!
-* Communicate before modifying codes with a marked author.
-* Open a new branch or directory if you want to make significant changes.
-* You can use command line to manage your code. Or, you can use [Github Desktop](https://desktop.github.com/), which will be easier to manage if you don't have any previous git experience.
-* Don't `push` any file larger than **5Mb**. You should create / add `gitignore` for the large files stored in your local repository. If you don't know or are not sure about how `gitignore` works, consult Alvin Sun or Nickel Liang.
+This repository hosted codes for low level hardware protocol & control algrithms implemented on the **DJI RoboMaster 2017 Control Board** with a STM32F427 chip as its main MCU.
 
 ## Important File Structure
 
-* [Applications](https://github.com/NickelLiang/iRM_Embedded/tree/master/Applications) - User Level Codes
+* [Applications](https://github.com/illini-robomaster/iRM_Embedded_2017/tree/master/Applications) - User Level Generic Libraries
 
-* [STM32F427xx.cmake](https://github.com/NickelLiang/iRM_Embedded/blob/master/STM32F427xx.cmake) - CMake Toolchain File
+* [Configs](https://github.com/illini-robomaster/iRM_Embedded_2017/tree/master/Configs) - Board Specific / Robot Specific configuration headers
 
-* iRM_Embedded.ioc - Hardware Pin Definition Generated From STM32CubeMX
+* [STM32F427xx.cmake](https://github.com/illini-robomaster/iRM_Embedded_2017/blob/master/STM32F427xx.cmake) - CMake Toolchain File
+
+* iRM\_Embedded\_2017.ioc - Hardware Pin Definitions for STM32CubeMX to generate driver level source codes
 
 * HAL / Driver Level Libs - Should NOT Be Modified
 	* Inc / Src - Header & source files for HAL libraries
