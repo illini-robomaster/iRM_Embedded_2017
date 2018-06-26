@@ -2,9 +2,15 @@
 
 This repository hosted codes for low level hardware protocol & control algrithms implemented on the **DJI RoboMaster 2017 Control Board** with a STM32F427 chip as its main MCU.
 
+**Note:** since this repository contains git submodules, you will have to clone this repo with `--recursive` tag to obtain all source codes:
+
+```
+git clone --recursive https://github.com/illini-robomaster/iRM_Embedded_2017.git
+```
+
 ## Important File Structure
 
-* [Applications](https://github.com/illini-robomaster/iRM_Embedded_2017/tree/master/Applications) - User Level Generic Libraries
+* [Applications](https://github.com/illini-robomaster/iRM_Embedded_Libraries) - User Level Generic Libraries (as a git submodule)
 
 * [Configs](https://github.com/illini-robomaster/iRM_Embedded_2017/tree/master/Configs) - Board Specific / Robot Specific configuration headers
 
