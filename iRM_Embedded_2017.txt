@@ -1,6 +1,6 @@
-Configuration	iRM_Embedded
+Configuration	iRM_Embedded_2017
 STM32CubeMX 	4.26.0
-Date	06/25/2018
+Date	06/26/2018
 MCU	STM32F427IIHx
 
 
@@ -145,7 +145,7 @@ R11	PE15	GPIO_EXTI15	SD_EXTI
 SOFTWARE PROJECT
 
 Project Settings : 
-Project Name : iRM_Embedded
+Project Name : iRM_Embedded_2017
 Project Folder : /Users/alvin/iRM_Embedded
 Toolchain / IDE : SW4STM32
 Firmware Package Name and Version : STM32Cube FW_F4 V1.21.0

@@ -5,7 +5,7 @@
 * make sure you have **CMake 3.11.10 or later** installed
 
 ## Compile Method 1 - Makefile
-1. Go to your project root directory `<path to your iRM_Embedded/>` in your terminal
+1. Go to your project root directory `<path to your iRM_Embedded_2017/>` in your terminal
 2. run `make <target>` and replace `<target>` with the robot type to compile codes for a specific type of robot  
 	e.g. run `make infantry1` or `make engineering`
 3. you can add flags for debug or testing purposes  

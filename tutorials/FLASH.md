@@ -5,7 +5,7 @@ see [How to compile this project](https://github.com/NickelLiang/iRM_Embedded/bl
 * [st-link](https://github.com/texane/stlink) - just follow their tutorial to install this tool
 
 ## Flash Commands
-1. After compiling the project, you should see a `.bin` file generated under either `iRM_Embedded` or `iRM_Embedded/build`
+1. After compiling the project, you should see a `.bin` file generated under either `iRM_Embedded_2017` or `iRM_Embedded_2017/build`
 2. run `st-flash write <path to your binary> 0x8000000`
 	
 	e.g. `st-flash write infantry1.bin 0x8000000`
