@@ -19,7 +19,7 @@
 						<toolChain id="fr.ac6.managedbuild.toolchain.gnu.cross.exe.debug.161229508" name="Ac6 STM32 MCU GCC" superClass="fr.ac6.managedbuild.toolchain.gnu.cross.exe.debug">
 							<option id="fr.ac6.managedbuild.option.gnu.cross.prefix.79835524" name="Prefix" superClass="fr.ac6.managedbuild.option.gnu.cross.prefix" value="arm-none-eabi-" valueType="string" />
 							<option id="fr.ac6.managedbuild.option.gnu.cross.mcu.593304044" name="Mcu" superClass="fr.ac6.managedbuild.option.gnu.cross.mcu" value="STM32F427IIHx" valueType="string" />
-							<option id="fr.ac6.managedbuild.option.gnu.cross.board.328898503" name="Board" superClass="fr.ac6.managedbuild.option.gnu.cross.board" value="iRM_Embedded" valueType="string" />
+							<option id="fr.ac6.managedbuild.option.gnu.cross.board.328898503" name="Board" superClass="fr.ac6.managedbuild.option.gnu.cross.board" value="iRM_Embedded_2017" valueType="string" />
 							<option id="fr.ac6.managedbuild.option.gnu.cross.instructionSet.567304941" name="Instruction Set" superClass="fr.ac6.managedbuild.option.gnu.cross.instructionSet" value="fr.ac6.managedbuild.option.gnu.cross.instructionSet.thumbII" valueType="enumerated" />
 							<option id="fr.ac6.managedbuild.option.gnu.cross.fpu.1084354973" name="Floating point hardware" superClass="fr.ac6.managedbuild.option.gnu.cross.fpu" value="fr.ac6.managedbuild.option.gnu.cross.fpu.fpv4-sp-d16" valueType="enumerated" />
 							<option id="fr.ac6.managedbuild.option.gnu.cross.floatabi.559524075" name="Floating-point ABI" superClass="fr.ac6.managedbuild.option.gnu.cross.floatabi" value="fr.ac6.managedbuild.option.gnu.cross.floatabi.hard" valueType="enumerated" />
@@ -89,7 +89,7 @@
 						<toolChain id="fr.ac6.managedbuild.toolchain.gnu.cross.exe.release.1564305171" name="Ac6 STM32 MCU GCC" superClass="fr.ac6.managedbuild.toolchain.gnu.cross.exe.release">
 							<option id="fr.ac6.managedbuild.option.gnu.cross.prefix.79835524" name="Prefix" superClass="fr.ac6.managedbuild.option.gnu.cross.prefix" value="arm-none-eabi-" valueType="string" />
 							<option id="fr.ac6.managedbuild.option.gnu.cross.mcu.593304044" name="Mcu" superClass="fr.ac6.managedbuild.option.gnu.cross.mcu" value="STM32F427IIHx" valueType="string" />
-							<option id="fr.ac6.managedbuild.option.gnu.cross.board.328898503" name="Board" superClass="fr.ac6.managedbuild.option.gnu.cross.board" value="iRM_Embedded" valueType="string" />
+							<option id="fr.ac6.managedbuild.option.gnu.cross.board.328898503" name="Board" superClass="fr.ac6.managedbuild.option.gnu.cross.board" value="iRM_Embedded_2017" valueType="string" />
 							<option id="fr.ac6.managedbuild.option.gnu.cross.instructionSet.567304941" name="Instruction Set" superClass="fr.ac6.managedbuild.option.gnu.cross.instructionSet" value="fr.ac6.managedbuild.option.gnu.cross.instructionSet.thumbII" valueType="enumerated" />
 							<option id="fr.ac6.managedbuild.option.gnu.cross.fpu.1084354973" name="Floating point hardware" superClass="fr.ac6.managedbuild.option.gnu.cross.fpu" value="fr.ac6.managedbuild.option.gnu.cross.fpu.fpv4-sp-d16" valueType="enumerated" />
 							<option id="fr.ac6.managedbuild.option.gnu.cross.floatabi.559524075" name="Floating-point ABI" superClass="fr.ac6.managedbuild.option.gnu.cross.floatabi" value="fr.ac6.managedbuild.option.gnu.cross.floatabi.hard" valueType="enumerated" />
@@ -157,7 +157,7 @@
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders" />
 	<storageModule moduleId="refreshScope" versionNumber="2">
 		<configuration artifactName="${ProjName}" configurationName="Debug">
-			<resource resourceType="PROJECT" workspacePath="iRM_Embedded" />
+			<resource resourceType="PROJECT" workspacePath="iRM_Embedded_2017" />
 		</configuration>
 	</storageModule>
 </cproject>
