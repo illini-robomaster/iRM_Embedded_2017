@@ -1,3 +1,4 @@
+/* USER CODE BEGIN Header */
 /**
   ******************************************************************************
   * File Name          : freertos.c
@@ -45,36 +46,54 @@
   *
   ******************************************************************************
   */
+/* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
 #include "FreeRTOS.h"
 #include "task.h"
+#include "main.h"
 #include "cmsis_os.h"
 
+/* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */     
 #include "rm_rtos.h"
 /* USER CODE END Includes */
 
-/* Variables -----------------------------------------------------------------*/
-osThreadId defaultTaskHandle;
+/* Private typedef -----------------------------------------------------------*/
+/* USER CODE BEGIN PTD */
 
+/* USER CODE END PTD */
+
+/* Private define ------------------------------------------------------------*/
+/* USER CODE BEGIN PD */
+
+/* USER CODE END PD */
+
+/* Private macro -------------------------------------------------------------*/
+/* USER CODE BEGIN PM */
+
+/* USER CODE END PM */
+
+/* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
 /* USER CODE END Variables */
+osThreadId defaultTaskHandle;
 
-/* Function prototypes -------------------------------------------------------*/
+/* Private function prototypes -----------------------------------------------*/
+/* USER CODE BEGIN FunctionPrototypes */
+
+/* USER CODE END FunctionPrototypes */
+
 void StartDefaultTask(void const * argument);
 
 extern void MX_FATFS_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
-/* USER CODE BEGIN FunctionPrototypes */
-
-/* USER CODE END FunctionPrototypes */
-
-/* Hook prototypes */
-
-/* Init FreeRTOS */
-
+/**
+  * @brief  FreeRTOS initialization
+  * @param  None
+  * @retval None
+  */
 void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN Init */
   RM_RTOS_Init();
@@ -112,7 +131,13 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE END RTOS_QUEUES */
 }
 
-/* StartDefaultTask function */
+/* USER CODE BEGIN Header_StartDefaultTask */
+/**
+  * @brief  Function implementing the defaultTask thread.
+  * @param  argument: Not used 
+  * @retval None
+  */
+/* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void const * argument)
 {
   /* init code for FATFS */
@@ -123,6 +148,7 @@ void StartDefaultTask(void const * argument)
   /* USER CODE END StartDefaultTask */
 }
 
+/* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
 
 /* USER CODE END Application */
